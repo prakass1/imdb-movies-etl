@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Oct 19 22:47:01 CEST 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-01a1-55ea-ead0-0000017222c0 
+on database directory /Users/subashprakash/git-repos/movies_etl/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
+Loaded from file:/Users/subashprakash/opt/spark-4.1.3-bin-hadoop3/jars/derby-10.16.1.1.jar
+java.vendor=Homebrew
+java.runtime.version=21.0.12.1
+user.dir=/Users/subashprakash/git-repos/movies_etl
+os.name=Mac OS X
+os.arch=aarch64
+os.version=26.5.2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

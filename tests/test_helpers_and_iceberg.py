@@ -52,7 +52,8 @@ class ExtendedModel(BaseModel):
 
 def test_titles_model_mappings():
     iceberg_schema = map_pydantic_to_iceberg_schema(Titles)
-    assert iceberg_schema["poster_link"] == "string"
+    assert "poster_link" not in iceberg_schema
+    assert iceberg_schema["votes_count"] == "int"
     assert iceberg_schema["released_year"] == "int"
     assert iceberg_schema["imdb_rating"] == "double"
     assert iceberg_schema["certificate"] == "string"
@@ -164,7 +165,7 @@ def test_load_to_ldg():
     mock_spark = MagicMock()
     mock_df = MagicMock()
     mock_df.count.return_value = 10
-    mock_df.columns = ["movieid", "poster_link", "series_title", "released_year", "certificate", "runtime", "genre", "imdb_rating", "overview", "meta_score", "director", "no_of_votes", "gross", "op", "transaction_ts"]
+    mock_df.columns = ["movieid", "series_title", "released_year", "certificate", "runtime", "genre", "imdb_rating", "overview", "meta_score", "director", "votes_count", "gross", "op", "transaction_ts"]
     mock_spark.read.csv.return_value = mock_df
 
     merge_sql = load_to_ldg(mock_spark)

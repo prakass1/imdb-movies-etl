@@ -6,7 +6,6 @@ from pydantic import BaseModel
 
 class Titles(BaseModel):
     movieid: str
-    poster_link: str
     series_title: str
     released_year: int
     certificate: str | None
@@ -16,5 +15,5 @@ class Titles(BaseModel):
     overview: str
     meta_score: int
     director: str
-    no_of_votes: int
+    votes_count: int
     gross: int

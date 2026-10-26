@@ -5,7 +5,7 @@ WITH raw AS (
         series_title,
         imdb_rating,
         gross,
-        no_of_votes,
+        votes_count AS no_of_votes,
         meta_score,
         TRIM(genre_tag) AS genre_tag
     FROM {catalog_db_table}
